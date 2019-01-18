@@ -1,0 +1,31 @@
+@charset "utf-8";
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color:#aaa;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color:#aaa;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	color:#aaa;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color:#aaa;
+}
+#wrap{height:100%;min-height:500px;padding:100px 50px;background-color:#f4f4f4;}
+#login_wrap{
+	width:300px;margin:0 auto;padding:20px;background-color:#fff;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	-moz-box-shadow:0 3px 10px rgba(0, 0, 0, 0.175);
+	-webkit-box-shadow:0 0px 10px rgba(0, 0, 0, 0.175);
+	box-shadow:0 0px 10px rgba(0, 0, 0, 0.175);
+}
+#login_wrap h1{text-align:center;}
+#login_wrap h1 img{max-width:100%;}
+#login_wrap h1.text{padding:25px 0;font-size:32px;color:#000;}
+#login_wrap .input_box{padding-left:35px;position:relative;margin:5px 0;}
+#login_wrap .input_box input{width:100%;padding:10px;border:1px solid #ddd;}
+#login_wrap .input_box select{width:100%;padding:10px;border:1px solid #ddd;}
+#login_wrap .input_box label{position:absolute;top:0;left:0;line-height:38px;font-weight:bold;}
+#login_wrap button{width:100%;padding:10px;margin-top:15px;border:0 none;background-color:#387ccf;color:#fff;font-weight:bold;}

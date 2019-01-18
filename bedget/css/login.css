@@ -1,0 +1,14 @@
+@charset "utf-8";
+body,html{height:100%;}
+#wrap{position:relative;height:100%;}
+
+/* login_box */
+.login_box{position:absolute;top:50%;left:50%;margin-top:-75px;margin-left:-205px;}
+.login_box form{width:410px;}
+.login_box form fieldset .login_txt div{margin-top:20px;}
+.login_box form fieldset .login_txt div:first-child{margin-top:-20px;}
+.login_box form fieldset .login_txt div:after{content:"";display:block;height:0;line-height:0;clear:both;}
+.login_box form fieldset .login_txt div label{float:left;padding-top:5px;font-size:20px;}
+.login_box form fieldset .login_txt div input{float:right;width:299px;padding:11px;border:1px solid #e2e2e2;}
+
+.login_box form fieldset .btn_1{display:block;width:410px;height:50px;line-height:50px;margin-top: 20px;background:#1c2951;border:0 none;font-weight:400;font-size:16px;color:#fff;text-align:center;text-decoration:none;}

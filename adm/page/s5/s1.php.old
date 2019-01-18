@@ -1,0 +1,131 @@
+<?php 
+include_once($_SERVER['DOCUMENT_ROOT'].'/adm/_head.php');
+?>
+<section class="section1">
+	<div class="table_wrap1 no_line">
+		<table>
+			<caption>검색필터</caption>
+			<colgroup>
+				<col width="100">
+				<col width="">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>검색필터</th>
+					<td>
+						<form method="post" action="">
+							<input type="text" class="w_input1" id="date1_start" value="" name="" placeholder="시작일" style="width:180px"> ~ 
+							<input type="text" class="w_input1" id="date1_end" value="" name="" placeholder="종료일" style="width:180px">
+							&nbsp;&nbsp;
+							<select name="" class="w_input1">
+								<option value="">차트</option>
+								<option value="">환자명</option>
+								<option value="">출입제한 이력</option>
+							</select>
+							<input type="text" class="w_input1" value="" name="" style="width:180px">
+							<button type="button" class="bt_s1 input_sel" >검색</button>
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="table_wrap1">
+		<table>
+			<caption>출입제한이력 목록</caption>
+			<colgroup>
+				<col width="50">
+				<col width="80">
+				<col width="">
+				<col width="">
+				<col width="">
+				<col width="">
+				<col width="140">
+			</colgroup>
+			<thead>
+				<tr>
+					<th><input type="checkbox" value="" name=""></th>
+					<th>글번호</th>
+					<th>차트</th>
+					<th>환자명</th>
+					<th>출입제한 이력</th>
+					<th>등록일</th>
+					<th>정보</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php for($i=1;$i<11;$i++){?>
+				<tr>
+					<td class="txt_c"><input type="checkbox" value="" name=""></td>
+					<td class="txt_c"><?php echo $i; ?></td>
+					<td class="txt_c">P0001</td>
+					<td class="txt_c">홍길동</td>
+					<td class="txt_c">1층 출입금지 구역</td>
+					<td class="txt_c">2018-10-15 11:30</td>
+					<td class="txt_c"><a href="s1sview.php" class="bt_s1">정보확인</a></td>
+				</tr>
+				<?php }?>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="bt_wrap1">
+		<div class="left_box">
+			<button type="button" class="bt_1">선택삭제</button>
+		</div>
+	</div>
+
+	<nav class="paging_type1">
+		<a href="javascript:void(0);" class="arr all_prev"><i>처음</i></a>
+		<a href="javascript:void(0);" class="arr prev"><i>이전</i></a>
+		<a href="javascript:void(0);" class="active">1</a>
+		<a href="javascript:void(0);">2</a>
+		<a href="javascript:void(0);">3</a>
+		<a href="javascript:void(0);">4</a>
+		<a href="javascript:void(0);">5</a>
+		<a href="javascript:void(0);" class="arr next"><i>마지막</i></a>
+		<a href="javascript:void(0);" class="arr all_next"><i>마지막</i></a>
+	</nav>
+</section>
+
+
+<script type="text/javascript" src="/adm/js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(function() {
+	var dateFormat = 'yy-mm-dd';
+	var from = $('#date1_start').datepicker({
+		dateFormat: dateFormat,
+		defaultDate: '+1w',
+		changeMonth: true,
+		numberOfMonths: 1
+	}).on( 'change', function() {
+		to.datepicker( 'option', 'minDate', getDate( this ) );
+	});
+	var to = $('#date1_end').datepicker({
+		dateFormat: dateFormat,
+		defaultDate: '+1w',
+		changeMonth: true,
+		numberOfMonths: 1
+	}).on( 'change', function() {
+		from.datepicker( 'option', 'maxDate', getDate( this ) );
+	});
+
+	function getDate( element ) {
+		var date;
+		try {
+			date = $.datepicker.parseDate( dateFormat, element.value );
+		} catch( error ) {
+			date = null;
+		}
+		return date;
+	}
+});
+
+//]]>
+</script>
+
+<?php
+include_once($_SERVER['DOCUMENT_ROOT'].'/adm/_tail.php');
+?>

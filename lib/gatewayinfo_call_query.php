@@ -1,0 +1,4 @@
+<?php
+$sql_common = "";
+
+?>

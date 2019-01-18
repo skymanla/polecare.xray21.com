@@ -1,0 +1,26 @@
+@charset "utf-8";
+body,html{height:100%;}
+#wrap{height:100%;}
+#wrap .gnb > li.active > a{color:#d82f3f;}
+#wrap .gnb > li.active > ul{display:block;}
+
+/* STR header */
+header{z-index:999;position:absolute;top:0;left:0;width:100%;background-color:#3c8dbc;overflow:hidden;}
+header h1{float:left;width:230px;height:50px;line-height:50px;font-weight:700;font-size:30px;color:#333;background-color:#367fa9;color:#fff;text-align:center;}
+header p{float:right;width:200px;height:50px;line-height:50px;color:#fff;}
+
+/* nav */
+nav{z-index:998;position:absolute;top:0;left:0;width:230px;min-height:100%;padding-top:50px;background-color:#222d32;text-align:center;}
+#wrap nav a{text-decoration:none;font-size:20px;}
+#wrap nav > a{display:block;padding:12px 5px 12px 5px;color:#d82f3f;}
+.gnb > li > ul{display:none;}
+/*.gnb > li:hover > ul{display:block;}*/
+.gnb > li > a{display:block;padding:12px 5px 12px 5px;color:#fff;}
+.gnb > li > ul > li.active > a{color:#fff;}
+.gnb > li > ul > li > a:hover{color:#fff;}
+/* END header */
+
+/* STR footer */
+footer{height:6%;padding:15px;margin-left:230px;border-top:1px solid #d2d6de;color:#444;}
+/* END footer */
+

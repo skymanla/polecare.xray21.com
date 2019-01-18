@@ -1,0 +1,40 @@
+@charset "utf-8";
+#wrap{position:relative;height:100%;min-height:450px;background:url('/img/login_bg.jpg') no-repeat center;background-size:cover;}
+#login_box{
+	position:absolute;top:50%;left:50%;width:300px;color:#fff;
+	-ms-transform: translate(-50%, -50%); /* IE 9 */
+	-webkit-transform: translate(-50%, -50%); /* Safari */
+	transform: translate(-50%, -50%);
+}
+#login_box header,
+#login_box .form_box{background:rgba(255, 255, 255, 0.20);}
+#login_box header{
+	padding:20px;text-align:center;
+		-moz-border-radius:5px 5px 0 0;
+	-webkit-border-radius:5px 5px 0 0;
+	border-radius:5px 5px 0 0;
+}
+#login_box header h1{font-size:26px;color:#18ecff;}
+#login_box header p{opacity:0.5;font-size:12px;}
+#login_box .form_box{
+	padding:20px 15px;margin-top:5px;
+			-moz-border-radius:0 0 5px 5px;
+	-webkit-border-radius:0 0 5px 5px;
+	border-radius:0 0 5px 5px;
+}
+#login_box .form_box input{width:100%;padding:10px;margin-bottom:5px;border:1px solid #8b8a8d;background-color:transparent;color:white;}
+#login_box .form_box button{
+	width:100%;padding:15px;margin-top:15px;border:0 none;background-color:#00a7b6;color:#fff;font-weight:bold;font-size:18px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+#login_box .form_box .check_user{margin-top:15px;text-align:center;font-size:0;}
+#login_box .form_box .check_user a{position:relative;display:inline-block;padding:0 10px;color:#fff;opacity:0.5;font-size:12px;font-weight:bold;text-decoration:none;}
+#login_box .form_box .check_user a:after{
+	content:"";position:absolute;top:50%;left:0;width:1px;height:5px;background-color:#fff;opacity:0.5;
+	-ms-transform: translate(0, -50%); /* IE 9 */
+	-webkit-transform: translate(0, -50%); /* Safari */
+	transform: translate(0, -50%);
+}
+#login_box .form_box .check_user a:first-child:after{display:none;}
